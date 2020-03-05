@@ -1,0 +1,2 @@
+rootProject.name='CardPost'
+include ':app'
