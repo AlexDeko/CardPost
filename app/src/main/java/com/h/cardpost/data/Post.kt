@@ -1,6 +1,9 @@
 package com.h.cardpost.data
 
-//data class Post(val text: String,
-//                val date: String,
-//                ) {
-//}
+data class Post(
+    private var text: String,
+    private var date: String,
+    private var like: Like,
+    private var comment: Comment,
+    private var reply: Repost) {
+}

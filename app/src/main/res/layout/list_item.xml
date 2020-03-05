@@ -18,20 +18,21 @@
         android:padding="@dimen/list_item_padding">
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/titleItem1"
+            android:id="@+id/dateItem"
             style="@style/TextAppearance.MaterialComponents.Body2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="@dimen/list_item_padding"
-            android:text="TextView"
+            android:text="22.03.2020"
+            android:maxEms="10"
             android:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/textItem2"
+            android:id="@+id/textItem"
             style="@style/TextAppearance.MaterialComponents.Headline6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -39,16 +40,17 @@
             android:layout_marginStart="@dimen/list_item_padding"
             android:layout_marginTop="4dp"
             android:ellipsize="end"
-            android:maxLines="3"
+            android:maxLines="9"
             android:text="TextView"
+            android:textColor="@color/colorBlack"
             android:textSize="18sp"
             android:visibility="visible"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/titleItem1" />
+            app:layout_constraintTop_toBottomOf="@id/dateItem" />
 
 
         <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/appCompatImageButton"
+            android:id="@+id/ImageButtonLike"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -59,7 +61,7 @@
             app:layout_constraintHorizontal_bias="0.8"
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textItem2"
+            app:layout_constraintTop_toBottomOf="@+id/textItem"
             app:layout_constraintVertical_bias="0.0" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -73,14 +75,14 @@
             android:text="@string/count"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/appCompatImageButton3"
+            app:layout_constraintEnd_toStartOf="@+id/ImageButtonComment"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/appCompatImageButton"
-            app:layout_constraintTop_toBottomOf="@+id/textItem2" />
+            app:layout_constraintStart_toEndOf="@+id/ImageButtonLike"
+            app:layout_constraintTop_toBottomOf="@+id/textItem" />
 
 
         <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/appCompatImageButton3"
+            android:id="@+id/ImageButtonComment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -90,7 +92,7 @@
             app:layout_constraintEnd_toStartOf="@+id/countComments"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/countLikes"
-            app:layout_constraintTop_toBottomOf="@+id/textItem2" />
+            app:layout_constraintTop_toBottomOf="@+id/textItem" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/countComments"
@@ -100,13 +102,13 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
             android:padding="8dp"
-            android:text="@string/count"
+            android:text="@string/countComment"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/ImageButtonReply"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/appCompatImageButton3"
-            app:layout_constraintTop_toBottomOf="@+id/textItem2" />
+            app:layout_constraintStart_toEndOf="@+id/ImageButtonComment"
+            app:layout_constraintTop_toBottomOf="@+id/textItem" />
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/ImageButtonReply"
@@ -116,25 +118,27 @@
             android:backgroundTint="@color/colorNull"
             android:src="@drawable/ic_reply_24dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/countReply"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/countComments"
-            app:layout_constraintTop_toBottomOf="@+id/textItem2" />
+            app:layout_constraintTop_toBottomOf="@+id/textItem" />
 
         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/countReply"
             style="@style/TextAppearance.MaterialComponents.Overline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="4dp"
             android:padding="8dp"
-            android:text="@string/count"
+            android:text="@string/countReply"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/ImageButtonReply"
-            app:layout_constraintTop_toBottomOf="@+id/textItem2" />
+            app:layout_constraintTop_toBottomOf="@+id/textItem"
+            app:layout_constraintVertical_bias="0.285" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
